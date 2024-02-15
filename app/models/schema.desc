@@ -1,0 +1,63 @@
+== User
+{
+  "_id": "ObjectId",
+  "username": "String",
+  "email": "String",
+  "createdAt": "Date",
+  "image": "String"
+}
+=== Task
+{
+  "_id": "ObjectId",
+  "userId": "ObjectId",
+  "title": "String",
+  "description": "String",
+  "creationDate": "Date",
+  "dueDate": "Date",
+  "status": "String",
+  "todo": [
+    {
+      "title": "String",
+      "status": "Boolean"
+    }
+  ],
+  "labels": ["String"],
+  "collaborators": ["ObjectId"],
+  "reminders": ["ObjectId"],
+  "priority": "String"
+}
+=== Collection
+{
+  "_id": "ObjectId",
+  "userId": "ObjectId",
+  "title": "String",
+  "description": "String",
+  "creationDate": "Date",
+  "tasks": ["ObjectId"],
+}
+=== Collaborator
+{
+  "_id": "ObjectId",
+  "taskId": "ObjectId",
+  "userId": "ObjectId",
+  "role": "String"
+}
+=== Reminder 
+{
+  "_id": "ObjectId",
+  "taskId": "ObjectId",
+  "userId": "ObjectId",
+  "message": "String",
+  "isRead": "Boolean",
+  "createdAt": "Date"
+}
+=== Comment 
+{
+  "_id": "ObjectId",
+  "taskId": "ObjectId",
+  "userId": "ObjectId",
+  "text": "String",
+  "createdAt": "Date"
+}
+
+
